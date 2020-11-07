@@ -1,5 +1,5 @@
 const sel = require('../../data/selectors.json');
-const exd = require('../../data/expected.json')
+const exp = require('../../data/expected.json')
 
 describe('My Little Hero', function () {
 
@@ -40,22 +40,22 @@ describe('My Little Hero', function () {
 
         it('TC-006 Label for name = 1. What is your Hero\'s name?', function () {
             const text = $$(sel.label)[0].getAttribute('title');
-            expect(text).toEqual('1. What is your Hero\'s name?');
+            expect(text).toEqual(exp.labelName);
         });
 
         it('TC-007 Label for gender =  2. Please choose a gender.', function () {
             const text = $$(sel.label)[1].getAttribute('title');
-            expect(text).toEqual('2. Please choose a gender.');
+            expect(text).toEqual(exp.labelGender);
         });
 
         it('TC-008 Label for age = 3. How old is your hero?', function () {
             const text = $$(sel.label)[2].getAttribute('title');
-            expect(text).toEqual('3. How old is your hero?');
+            expect(text).toEqual(exp.labelAge);
         });
 
         it('TC-009 Label for story = 4. What type of story would you like to read?', function () {
             const text = $$(sel.label)[3].getAttribute('title');
-            expect(text).toEqual('4. What type of story would you like to read?');
+            expect(text).toEqual(exp.labelStory);
         });
     });
 });
